@@ -12,7 +12,11 @@ s = ({"QML", 1970, 1972},
 
 def main(r):
     s1 = set(r)
-    return [i for i in range(len(s)) if not len(s[i] - s1)][0]
+    return max([i for i in range(len(s)) if not (len(s[i] - s1))])
 
 
 print(main(['SAGE', 1968, 'STON', 1972]))
+print(main(['QML', 1968, 'STON', 2011]))
+print(main(['CLIPS', 1970, 'STON', 1972]))
+print(main(['SAGE', 1970, 'STON', 1972]))
+print(main(['SAGE', 1968, 'OOC', 2011]))
